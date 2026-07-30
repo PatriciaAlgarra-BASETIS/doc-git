@@ -28,7 +28,7 @@ Holaa, yo soy Patri y esta es mi guía para aprender o tener a mano algunos de l
 
 ---
 
-### Fichero `.gitignore` :open_file_folder:
+### Fichero `.gitignore` 📁
 Es un archivo que le dice a Git qué cosas NO debe incluir en el repositorio.
 
 Sirve para evitar subir ficheros y cosas no relevantes o cosas sensibles q no deben estar como:
