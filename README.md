@@ -28,6 +28,35 @@ Holaa, yo soy Patri y esta es mi guía para aprender o tener a mano algunos de l
 
 ---
 
+### Fichero `.gitignore` :open_file_folder:
+Es un archivo que le dice a Git qué cosas NO debe incluir en el repositorio.
+
+Sirve para evitar subir ficheros y cosas no relevantes o cosas sensibles q no deben estar como:
+
+- dependencias instalabres (node_modules, venv)
+- archivos temporales o compilados (dist, build, logs)
+- configuraciones personales del editor (.vscode, .idea)
+- y sobre todo, secretos (.venv, claves API, tokens)
+
+
+> <u>⚠️ **Cuidado**</u>
+> 
+> Si ya subiste un archivo antes, añadirlo al `.gitignore` NO lo elimina automáticamente del repo.
+>
+> Para dejar de trackearlo:
+> ```bash
+> git rm --cached archivo
+> ```
+>
+> o para limpiar todo:
+> ```bash
+> git rm -r --cached .
+> git add .
+> ```
+
+
+---
+
 # COMANDOS ‼️
 ---
 
