@@ -1,16 +1,16 @@
-# :brain: Guía rápida de Git (Completa y Visual)
+# 🧠 Guía rápida de Git (Completa y Visual)
 
 Holaa, yo soy Patri y esta es mi guía para aprender o tener a mano algunos de los comandos de Git. :shipit:
 
 ---
 
-## :pushpin: ¿Qué es Git?
+## 📌 ¿Qué es Git?
 
 **Git** es un sistema de control de versiones que te permite: 
-- Guardar cambios en tu código :file_folder:
-- Volver atrás si algo falla :rewind:
-- Trabajar en equipo :busts_in_silhouette:
-- Crear versiones de tu proyecto :label:
+- Guardar cambios en tu código 📁
+- Volver atrás si algo falla ⏪
+- Trabajar en equipo 👥
+- Crear versiones de tu proyecto 🏷️
 
 ---
 
@@ -28,27 +28,27 @@ Holaa, yo soy Patri y esta es mi guía para aprender o tener a mano algunos de l
 
 ---
 
-# COMANDOS :bangbang:
+# COMANDOS ‼️
 ---
 
-## :globe_with_meridians: Configuración Básica Global :globe_with_meridians:
- Para empezar a utilizar git debemos hacer una configuración global que mínimo tiene que incluir 2 cosas:
+## 🌍 Configuración Básica Global 🌍
+Para empezar a utilizar git debemos hacer una configuración global que mínimo tiene que incluir 2 cosas:
  
 - Nombre de Usuario
 - Email
 
-### :small_blue_diamond: 1. Configurar Nombre que salen en los commits
+### 🔹 1. Configurar Nombre que salen en los commits
 ```bash
 git config --global user.name "[Nombre]"
 ```
 
-> :clipboard: **Nota:** el archivo que modificamos con este comando se encuentra en /home/[usuario]/.gitconfig
+> 📋 **Nota:** el archivo que modificamos con este comando se encuentra en /home/[usuario]/.gitconfig
 
-### :small_blue_diamond: 2. Configurar el Email
+### 🔹 2. Configurar el Email
 ```bash
 git config --global user.email "tu_email@mail.com"
 ```
-### :small_blue_diamond: 3. Configurar Alias (Opcional)
+### 🔹 3. Configurar Alias (Opcional)
 ```bash
 git config --global alias.[nombre_alias] "Comando para el álias"
 ```
@@ -58,7 +58,7 @@ git config --global alias.[nombre_alias] "Comando para el álias"
 
 
 ___
-## :diamond_shape_with_a_dot_inside: [GIT INIT] Iniciar nuestro repositorio 
+## 💠 [GIT INIT] Iniciar nuestro repositorio 
 
 Para ello debemos estar en nuestra carpeta del "Proyecto" que vayamos a realizar 
 > Puedes moverte hacia ella con **'cd /ruta/del/proyecto'**
@@ -84,7 +84,7 @@ git branch -m "main"
 
 
 ___
-## :diamond_shape_with_a_dot_inside: [GIT STATUS] Visualizar el estado (Staging Area)
+## 💠 [GIT STATUS] Visualizar el estado (Staging Area)
 
 Este comando te va a servir para cuando realizes cambios, ver en que estado se encuentran esos cambios.
 ```bash
@@ -95,7 +95,7 @@ git status
 
 
 ___
-## :diamond_shape_with_a_dot_inside: [GIT ADD] Añadir archivos
+## 💠 [GIT ADD] Añadir archivos
 
 En tu editor de código favorito, puedes empezar a crear tus archivos de código para tu Proyecto pero hasta que tu no los añadas al staging area, no podrás crear tus commits.
 
@@ -115,7 +115,7 @@ git add .
 
 
 ___
-## :diamond_shape_with_a_dot_inside: [GIT COMMIT] Crear imágenes
+## 💠 [GIT COMMIT] Crear imágenes
 
 Suele utilizarse después del add, no es obligatorio. Sirve para realizar la imagen.
 
@@ -140,7 +140,7 @@ git commit -m "fix: texto que identifique por qué se hizo el commit"
 
 
 ___
-## :diamond_shape_with_a_dot_inside: [GIT LOG] Visor de eventos de Git
+## 💠 [GIT LOG] Visor de eventos de Git
 
 Con este comando lo que puedes hacer es ver que cambios se han ido haciendo sobre los commits, es decir, que commits hay, en cual estoy, que hash identificador tienen...
 
@@ -150,16 +150,16 @@ git log
 ### | Atributos importantes del 'git log'
 Hay ciertos atributos que se pueden utilizar junto al log para que nos sea más visual dependiendo de que queramos hacer, algunos de los ejemplos son:
 
-:small_blue_diamond: 1. Para verlo con **línea gráfica**.
+🔹 1. Para verlo con **línea gráfica**.
  ```bash
  git log --graph
  ```
 
-:small_blue_diamond: 2. Para verlo **en una línea sin autor y ni fecha**.
+🔹 2. Para verlo **en una línea sin autor y ni fecha**.
 ```bash
 git log --pretty=oneline
 ```
-:small_blue_diamond: 3. Para verlo **super resumido**.
+🔹 3. Para verlo **super resumido**.
 ```bash
 git log --graph --decorate --all --oneline
 ```
@@ -167,7 +167,7 @@ git log --graph --decorate --all --oneline
 
 
 ___
-## :diamond_shape_with_a_dot_inside: [GIT SWITCH] Para cambiar de rama
+## 💠 [GIT SWITCH] Para cambiar de rama
 
 Simplemente te ayuda a cambiar de rama sin hacer nada más.
 ```bash
@@ -176,12 +176,12 @@ git switch [nombre_rama]
 
 
 ___
-## :diamond_shape_with_a_dot_inside: [GIT CHECKOUT]
+## 💠 [GIT CHECKOUT]
 
 Este comando tiene muchas funciones y hay tener varias cosas en cuenta.
 Sirve principalmente para moverte dentro del repositorio.
  
- #### :small_blue_diamond:**1. Uso principal: Cambiar de rama.**
+ #### 🔹**1. Uso principal: Cambiar de rama.**
  
  Aquí hay que tener clara una cosa
  
@@ -194,11 +194,11 @@ El commando es:
 ```bash
 git checkout [nombre_rama]
 ```
-> :eyes: **OJO:** Si tienes cambios sin guardar, git puede: 
+> 👀 **OJO:** Si tienes cambios sin guardar, git puede: 
 >    - bloquear el cambio
 >   - o moverlos contigo (dependiendo del caso)
 
-#### :small_blue_diamond: **2. Crear o cambiar de rama**
+#### 🔹 **2. Crear o cambiar de rama**
 ```bash
 git checkout -b [nombre_nueva_rama]
 ```
@@ -206,21 +206,21 @@ Esto hace 2 cosas:
 - Crea la rama (-b)
 - Se mueve a ella
 
-#### :small_blue_diamond: **3. Recuperar archivos**
+#### 🔹 **3. Recuperar archivos**
 Restaura el archivo a su último commit.
 ```bash
 git checkout archivo.txt
 ```
-#### :small_blue_diamond: **4. Ir a un commit concreto**
+#### 🔹 **4. Ir a un commit concreto**
 Te mueves a un commit específico
-> :eyes: **OJO:** pero debes tener en cuenta que esto crea un estado especial **Detached HEAD** que significa
+> 👀 **OJO:** pero debes tener en cuenta que esto crea un estado especial **Detached HEAD** que significa
 > - No estas en ninguna rama
 > - Estás "viendo el pasado"
 
 ```bash
 git checkout [hash]
 ```
-> :clipboard: **Nota:** el hash puede ser completo o la versión simplificada, podemos verlo con **'git log'**
+> 📋 **Nota:** el hash puede ser completo o la versión simplificada, podemos verlo con **'git log'**
 
 Sirve para: 
 - Probar versiones antiguas
@@ -237,7 +237,7 @@ git checkout main
 
 
 ___
-## :diamond_shape_with_a_dot_inside: [GIT RESET] ¡CUIDADO! "Volver atrás"
+## 💠 [GIT RESET] ¡CUIDADO! "Volver atrás"
 
 Es un comando peligroso porque puede afectar a 3 cosas:
 1. Historial (commits)
@@ -263,24 +263,24 @@ git reset --hard
  - Elimina cambios en archivos
  - Limpia staging
 
- > :clipboard: **Nota:** si la liamos podemos utilizar **'git reflog'**
+ > 📋 **Nota:** si la liamos podemos utilizar **'git reflog'**
 
 
 
 
 ___
-## :diamond_shape_with_a_dot_inside: [GIT BRANCH] Ver, Crear y Gestionar Ramas
+## 💠 [GIT BRANCH] Ver, Crear y Gestionar Ramas
 
 
- #### :small_blue_diamond: **1. Ver ramas.**
+ #### 🔹 **1. Ver ramas.**
 ```bash
 git branch
 ```
-#### :small_blue_diamond: **2. Crear una rama.**
+#### 🔹 **2. Crear una rama.**
 ```bash
 git branch [nombre_rama]
 ```
-#### :small_blue_diamond: **3. Borrar una rama.**
+#### 🔹 **3. Borrar una rama.**
 ```bash
 git branch -d [nombre_rama]
 ```
@@ -291,7 +291,7 @@ git branch -d [nombre_rama]
 
 
 ___
-## :diamond_shape_with_a_dot_inside: [GIT REBASE] Mover el trabajo
+## 💠 [GIT REBASE] Mover el trabajo
 
 Reaplica los commits encima de otra rama, reescribiendo el historial. 
 Es primo hermano de "merge"
@@ -316,7 +316,7 @@ A ---- B ---- C ---- D' ---- E'
 
 
 ___
-## :diamond_shape_with_a_dot_inside: [GIT MERGE] Fusionar una rama con otra
+## 💠 [GIT MERGE] Fusionar una rama con otra
 
 Sirve para unir (fusionar) una rama con otra.
 Es primo hermano de "rebase"
@@ -333,28 +333,28 @@ git merge [nombre_rama]
 
 
 ___
-## :diamond_shape_with_a_dot_inside: [GIT DIFF] Ver diferencias de versiones
+## 💠 [GIT DIFF] Ver diferencias de versiones
 
 Sirve para ver las diferencias entre versiones de archivos.
 
-#### :small_blue_diamond: **1. Cambios sin añadir (Más común).**
+#### 🔹 **1. Cambios sin añadir (Más común).**
 ```bash
 git diff
 ```
-#### :small_blue_diamond: **2. Cambios ya añadidos.**
+#### 🔹 **2. Cambios ya añadidos.**
 ```bash
 git diff --staged
 ```
-#### :small_blue_diamond: **3. Comparar commits.**
+#### 🔹 **3. Comparar commits.**
 ```bash
 git diff commit1 commit2
 ```
-#### :small_blue_diamond: **4. Comparar ramas**
+#### 🔹 **4. Comparar ramas**
 ```bash
 git diff rama1 rama2
 ```
 
-#### :small_blue_diamond: **5. Ver cambios en un archivo**
+#### 🔹 **5. Ver cambios en un archivo**
 ```bash
 git diff archivo.txt
 ```
@@ -365,7 +365,7 @@ git diff archivo.txt
 
 
 ___
-## :diamond_shape_with_a_dot_inside: [GIT FETCH] Descarga cambios del SIN aplicar cambios
+## 💠 [GIT FETCH] Descarga cambios del SIN aplicar cambios
 
 Sirve para descargar cambios del repositorio remoto **SIN** aplicarlos en nuestro código
  
@@ -378,11 +378,11 @@ git fetch
 
 
 ___
-## :diamond_shape_with_a_dot_inside: [GIT PUSH] SUBIR commits
+## 💠 [GIT PUSH] SUBIR commits
 
 Sirve para subir commits al respositorio remoto (por ejemplo, GitHub)
 
-:warning:¡IMPORTANTE! Cuando subes por primera vez una rama, debemos hacer este comando:
+⚠️ ¡IMPORTANTE! Cuando subes por primera vez una rama, debemos hacer este comando:
 ```bash
 git push -u origin [rama (ej.main)]
 ```
@@ -405,11 +405,11 @@ git push
 
 
 ___
-## :diamond_shape_with_a_dot_inside: [GIT PULL] BAJAR commits
+## 💠 [GIT PULL] BAJAR commits
 
 Sirve para traer cambios del repositorio remoto a nuestro ordenador y además mezclarlos automáticamente con nuestra rama actual.
 
-> :bulb: **Idea principal:** 
+> 💡 **Idea principal:** 
 >
 > git pull= git fetch + git merge
 
