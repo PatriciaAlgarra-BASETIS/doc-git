@@ -1,0 +1,894 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://patricia-docs.com/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Documentación de Patricia</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Ubuntu Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="yellow">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-rapida-de-git-completa-y-visual" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="Documentación de Patricia" class="md-header__button md-logo" aria-label="Documentación de Patricia" data-md-component="logo">
+      
+  <img src="assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación de Patricia
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inicio
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="yellow"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark Mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="deep-orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Documentación de Patricia" class="md-nav__button md-logo" aria-label="Documentación de Patricia" data-md-component="logo">
+      
+  <img src="assets/logo.png" alt="logo">
+
+    </a>
+    Documentación de Patricia
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 ¿Qué es Git?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 ¿Qué es Git?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-trabaja-con-3-zonas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git trabaja con 3 zonas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-basico-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo básico de Git
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichero-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichero .gitignore 📁
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 ¿Qué es Git?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 ¿Qué es Git?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-trabaja-con-3-zonas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git trabaja con 3 zonas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-basico-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo básico de Git
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichero-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichero .gitignore 📁
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guia-rapida-de-git-completa-y-visual">🧠 Guía rápida de Git (Completa y Visual)</h1>
+<h2 id="que-es-git">📌 ¿Qué es Git?</h2>
+<p><strong>Git</strong> es un sistema de control de versiones que te permite: </p>
+<ul>
+<li>Guardar cambios en tu código 📁</li>
+<li>Volver atrás si algo falla ⏪</li>
+<li>Trabajar en equipo 👥</li>
+<li>Crear versiones de tu proyecto 🏷️</li>
+</ul>
+<hr />
+<h3 id="git-trabaja-con-3-zonas">Git trabaja con 3 zonas:</h3>
+<ol>
+<li><strong>Working Directory</strong> -&gt; Donde editas archivos</li>
+<li><strong>Staging Area</strong> -&gt; Lo que vas a guardar</li>
+<li><strong>Repository</strong> -&gt; historial de commits</li>
+</ol>
+<h3 id="flujo-basico-de-git">Flujo básico de Git</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1º Modificas archivos
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    |
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2º Los añades
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    |
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>3º Guardas cambios
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    |
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>4º Los subes
+</span></code></pre></div>
+<hr />
+<h3 id="fichero-gitignore">Fichero <code>.gitignore</code> 📁</h3>
+<p>Es un archivo que le dice a Git qué cosas NO debe incluir en el repositorio.</p>
+<p>Sirve para evitar subir ficheros y cosas no relevantes o cosas sensibles q no deben estar como:</p>
+<ul>
+<li>dependencias instalabres (node_modules, venv)</li>
+<li>archivos temporales o compilados (dist, build, logs)</li>
+<li>configuraciones personales del editor (.vscode, .idea)</li>
+<li>y sobre todo, secretos (.venv, claves API, tokens)</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Cuidado</p>
+<p>Si ya subiste un archivo antes, añadirlo al <code>.gitignore</code> NO lo elimina automáticamente del repo.</p>
+<p>Para dejar de trackearlo:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>rm<span class="w"> </span>--cached<span class="w"> </span>archivo
+</span></code></pre></div></p>
+<p>o para limpiar todo:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>rm<span class="w"> </span>-r<span class="w"> </span>--cached<span class="w"> </span>.
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span></code></pre></div></p>
+</div>
+<hr />
+<h1 id="comandos">COMANDOS ‼️</h1>
+<hr />
+<h2 id="configuracion-basica-global">🌐 Configuración Básica Global 🌐</h2>
+<p>Para empezar a utilizar git debemos hacer una configuración global que mínimo tiene que incluir 2 cosas:</p>
+<ul>
+<li>Nombre de Usuario</li>
+<li>Email</li>
+<li></li>
+</ul>
+<h3 id="1-configurar-nombre-que-salen-en-los-commits">🔹 1. Configurar Nombre que salen en los commits</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"[Nombre]"</span>
+</span></code></pre></div>
+<blockquote>
+<p>📋 <strong>Nota:</strong> el archivo que modificamos con este comando se encuentra en /home/[usuario]/.gitconfig</p>
+</blockquote>
+<hr />
+<h3 id="2-configurar-el-email">🔹 2. Configurar el Email</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"tu_email@mail.com"</span>
+</span></code></pre></div>
+<hr />
+<h3 id="3-configurar-alias-opcional">🔹 3. Configurar Alias (Opcional)</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.<span class="o">[</span>nombre_alias<span class="o">]</span><span class="w"> </span><span class="s2">"Comando para el álias"</span>
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title"><strong>Ejemplo</strong></p>
+<p>git config --global alias.tree "log --graph --decorate --all --oneline"</p>
+</div>
+<hr />
+<h2 id="git-init-iniciar-nuestro-repositorio">💠 [GIT INIT] Iniciar nuestro repositorio</h2>
+<p>Para ello debemos estar en nuestra carpeta del "Proyecto" que vayamos a realizar </p>
+<blockquote>
+<p>Puedes moverte hacia ella con <strong>'cd /ruta/del/proyecto'</strong></p>
+</blockquote>
+<p>Una vez ahí ya puedes lanzar el siguiente comando:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>init
+</span></code></pre></div>
+<p>Con esto te aparecerá en la carpeta del Proyecto una carpeta oculta llamada <strong>".git"</strong></p>
+<details class="abstract">
+<summary><strong>Opcional</strong></summary>
+<p>Podemos cambiarle el nombre a la rama principal que aparece como "master", esto es algo personal porque luego al implementar con git, por defecto, esta rama se llama "main" además que se está estandarizando que se llame así</p>
+</details>
+<p>Podemos ver con el comando <strong>'git status'</strong> el nombre que tiene antes de cambiarlo</p>
+<p>Para cambiarlo usaremos este comando:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span><span class="s2">"main"</span>
+</span></code></pre></div></p>
+<hr />
+<h2 id="git-status-visualizar-el-estado-staging-area">💠 [GIT STATUS] Visualizar el estado (Staging Area)</h2>
+<p>Este comando te va a servir para cuando realizes cambios, ver en que estado se encuentran esos cambios.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>status
+</span></code></pre></div></p>
+<hr />
+<h2 id="git-add-anadir-archivos">💠 [GIT ADD] Añadir archivos</h2>
+<p>En tu editor de código favorito, puedes empezar a crear tus archivos de código para tu Proyecto pero hasta que tu no los añadas al staging area, no podrás crear tus commits.</p>
+<p>Commit: "foto" o captura instantánea del estado de tu proyecto en un momento específico, actuando como un punto de guardado seguro.</p>
+<p>Por eso para añadirlos está el comando:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>add<span class="w"> </span><span class="o">[</span>Nombre_del_archivo<span class="o">]</span>
+</span></code></pre></div>
+Pero también puedes utilizar este comando para <strong>añadir todos los archivos</strong> que estén sin añadir en en 'git status':</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span></code></pre></div>
+<hr />
+<h2 id="git-commit-crear-imagenes">💠 [GIT COMMIT] Crear imágenes</h2>
+<p>Suele utilizarse después del add, no es obligatorio. Sirve para realizar la imagen.</p>
+<p>La forma más cómoda de realizarlo es con el atributo <strong>-m</strong> para escribir directamente el texto que hace referencia al commit sin tener que abrir ningún editor de texto.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Texto que identifique por qué se hizo el commit"</span>
+</span></code></pre></div>
+<h3 id="tipos-de-commits">| Tipos de commits</h3>
+<p>Hay distintos tipos de commits que podemos encontrarlos en esta url <a href="https://www.conventionalcommits.org/es/v1.0.0/" title="Más info sobre Commits">conventionalcommits.org</a></p>
+<p>Principalmente hay 2:</p>
+<ul>
+<li><strong>fix:</strong> para cambios pequeños</li>
+<li><strong>feat:</strong> para cambios más grandes</li>
+</ul>
+<p>Se suelen asociar a las versiones.
+Su apariencia es la siguiente:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"fix: texto que identifique por qué se hizo el commit"</span>
+</span></code></pre></div></p>
+<hr />
+<h2 id="git-log-visor-de-eventos-de-git">💠 [GIT LOG] Visor de eventos de Git</h2>
+<p>Con este comando lo que puedes hacer es ver que cambios se han ido haciendo sobre los commits, es decir, que commits hay, en cual estoy, que hash identificador tienen...</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git<span class="w"> </span>log
+</span></code></pre></div>
+<h3 id="atributos-importantes-del-git-log">| Atributos importantes del 'git log'</h3>
+<p>Hay ciertos atributos que se pueden utilizar junto al log para que nos sea más visual dependiendo de que queramos hacer, algunos de los ejemplos son:</p>
+<p>🔹 1. Para verlo con <strong>línea gráfica</strong>.
+ <div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git<span class="w"> </span>log<span class="w"> </span>--graph
+</span></code></pre></div></p>
+<p>🔹 2. Para verlo <strong>en una línea sin autor y ni fecha</strong>.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>git<span class="w"> </span>log<span class="w"> </span>--pretty<span class="o">=</span>oneline
+</span></code></pre></div>
+🔹 3. Para verlo <strong>super resumido</strong>.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>git<span class="w"> </span>log<span class="w"> </span>--graph<span class="w"> </span>--decorate<span class="w"> </span>--all<span class="w"> </span>--oneline
+</span></code></pre></div></p>
+<hr />
+<h2 id="git-switch-para-cambiar-de-rama">💠 [GIT SWITCH] Para cambiar de rama</h2>
+<p>Simplemente te ayuda a cambiar de rama sin hacer nada más.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>git<span class="w"> </span>switch<span class="w"> </span><span class="o">[</span>nombre_rama<span class="o">]</span>
+</span></code></pre></div></p>
+<hr />
+<h2 id="git-checkout">💠 [GIT CHECKOUT]</h2>
+<p>Este comando tiene muchas funciones y hay tener varias cosas en cuenta.
+Sirve principalmente para moverte dentro del repositorio.</p>
+<h4 id="1-uso-principal-cambiar-de-rama">🔹 <strong>1. Uso principal: Cambiar de rama.</strong></h4>
+<p>Aquí hay que tener clara una cosa</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Comando</th>
+<th style="text-align: left;">Para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>git checkout</strong></td>
+<td style="text-align: left;">Hace MUCHAS cosas (cambiar rama, restaurar archivos, moverte a commits)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>git switch</strong></td>
+<td style="text-align: left;">SOLO cambia de rama (más claro y seguro)</td>
+</tr>
+</tbody>
+</table>
+<p>El commando es: 
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>git<span class="w"> </span>checkout<span class="w"> </span><span class="o">[</span>nombre_rama<span class="o">]</span>
+</span></code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">👀 <strong>¡OJO!</strong></p>
+<p>Si tienes cambios sin guardar, git puede: </p>
+<ul>
+<li>bloquear el cambio</li>
+<li>o moverlos contigo (dependiendo del caso)</li>
+</ul>
+</div>
+<hr />
+<h4 id="2-crear-o-cambiar-de-rama">🔹 <strong>2. Crear o cambiar de rama</strong></h4>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span><span class="o">[</span>nombre_nueva_rama<span class="o">]</span>
+</span></code></pre></div>
+Esto hace 2 cosas:</p>
+<ul>
+<li>Crea la rama (-b)</li>
+<li>Se mueve a ella</li>
+</ul>
+<hr />
+<h4 id="3-recuperar-archivos">🔹 <strong>3. Recuperar archivos</strong></h4>
+<p>Restaura el archivo a su último commit.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>archivo.txt
+</span></code></pre></div></p>
+<hr />
+<h4 id="4-ir-a-un-commit-concreto">🔹 <strong>4. Ir a un commit concreto</strong></h4>
+<p>Te mueves a un commit específico</p>
+<div class="admonition warning">
+<p class="admonition-title">👀 <strong>¡OJO!</strong></p>
+<p>Pero debes tener en cuenta que esto crea un estado especial <strong>Detached HEAD</strong> que significa</p>
+<ul>
+<li>No estas en ninguna rama</li>
+<li>Estás "viendo el pasado"</li>
+</ul>
+</div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>git<span class="w"> </span>checkout<span class="w"> </span><span class="o">[</span>hash<span class="o">]</span>
+</span></code></pre></div>
+<blockquote>
+<p>📋 <strong>Nota:</strong> el hash puede ser completo o la versión simplificada, podemos verlo con <strong>'git log'</strong></p>
+</blockquote>
+<p>Sirve para: </p>
+<ul>
+<li>Probar versiones antiguas</li>
+<li>Revisar código viejo</li>
+<li>Debuggear</li>
+</ul>
+<p>Para volver a la normalidad:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
+</span></code></pre></div></p>
+<hr />
+<h2 id="git-reset-cuidado-volver-atras">💠 [GIT RESET] ¡CUIDADO! "Volver atrás"</h2>
+<p>Es un comando peligroso porque puede afectar a 3 cosas:
+1. Historial (commits)
+2. Staging area
+3. Archivos (working directory)</p>
+<p>Se encarga de mover el puntero HEAD (donde estás en el historial)</p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>git<span class="w"> </span>reset
+</span></code></pre></div>
+Qué hace:</p>
+<ul>
+<li>Quita el archivo del 'git add'</li>
+<li>NO bora cambios</li>
+</ul>
+<hr />
+<h4 id="git-reset-hard">GIT RESET --HARD</h4>
+<p>Este es otro tipo que es el más peligroso
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>git<span class="w"> </span>reset<span class="w"> </span>--hard
+</span></code></pre></div>
+ Qué hace:</p>
+<ul>
+<li>Elimina el commit</li>
+<li>Elimina cambios en archivos</li>
+<li>Limpia staging</li>
+</ul>
+<blockquote>
+<p>📋 <strong>Nota:</strong> si la liamos podemos utilizar <strong>'git reflog'</strong></p>
+</blockquote>
+<hr />
+<h2 id="git-branch-ver-crear-y-gestionar-ramas">💠 [GIT BRANCH] Ver, Crear y Gestionar Ramas</h2>
+<h4 id="1-ver-ramas">🔹 <strong>1. Ver ramas.</strong></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>git<span class="w"> </span>branch
+</span></code></pre></div>
+<h4 id="2-crear-una-rama">🔹 <strong>2. Crear una rama.</strong></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>git<span class="w"> </span>branch<span class="w"> </span><span class="o">[</span>nombre_rama<span class="o">]</span>
+</span></code></pre></div>
+<h4 id="3-borrar-una-rama">🔹 <strong>3. Borrar una rama.</strong></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span><span class="o">[</span>nombre_rama<span class="o">]</span>
+</span></code></pre></div>
+<hr />
+<h2 id="git-rebase-mover-el-trabajo">💠 [GIT REBASE] Mover el trabajo</h2>
+<p>Reaplica los commits encima de otra rama, reescribiendo el historial. 
+Es primo hermano de "merge"</p>
+<p>Rebase = "mover el trabajo como si hubiera empezado más tarde"</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>git<span class="w"> </span>rebase<span class="w"> </span><span class="o">[</span>nombre_rama<span class="o">]</span>
+</span></code></pre></div>
+<blockquote>
+<p>📋<strong>Nota:</strong> Rebase <strong>NO</strong> mueve commits, los recrea. Por eso:</p>
+<ul>
+<li>Cambian los IDs</li>
+<li>Se "reescribe" la historia</li>
+</ul>
+</blockquote>
+<p>Ejemplo visual:</p>
+<p>A ---- B ---- C ---- D' ---- E'</p>
+<hr />
+<h2 id="git-merge-fusionar-una-rama-con-otra">💠 [GIT MERGE] Fusionar una rama con otra</h2>
+<p>Sirve para unir (fusionar) una rama con otra.
+Es primo hermano de "rebase"</p>
+<p>Merge = juntar historiales sin borrar nada</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>git<span class="w"> </span>merge<span class="w"> </span><span class="o">[</span>nombre_rama<span class="o">]</span>
+</span></code></pre></div>
+<hr />
+<h2 id="git-diff-ver-diferencias-de-versiones">💠 [GIT DIFF] Ver diferencias de versiones</h2>
+<p>Sirve para ver las diferencias entre versiones de archivos.</p>
+<h4 id="1-cambios-sin-anadir-mas-comun">🔹 <strong>1. Cambios sin añadir (Más común).</strong></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>git<span class="w"> </span>diff
+</span></code></pre></div>
+<h4 id="2-cambios-ya-anadidos">🔹 <strong>2. Cambios ya añadidos.</strong></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>git<span class="w"> </span>diff<span class="w"> </span>--staged
+</span></code></pre></div>
+<h4 id="3-comparar-commits">🔹 <strong>3. Comparar commits.</strong></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>git<span class="w"> </span>diff<span class="w"> </span>commit1<span class="w"> </span>commit2
+</span></code></pre></div>
+<h4 id="4-comparar-ramas">🔹 <strong>4. Comparar ramas</strong></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>git<span class="w"> </span>diff<span class="w"> </span>rama1<span class="w"> </span>rama2
+</span></code></pre></div>
+<h4 id="5-ver-cambios-en-un-archivo">🔹 <strong>5. Ver cambios en un archivo</strong></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>git<span class="w"> </span>diff<span class="w"> </span>archivo.txt
+</span></code></pre></div>
+<hr />
+<h2 id="git-fetch-descarga-cambios-sin-aplicarlos">💠 [GIT FETCH] Descarga cambios SIN aplicarlos</h2>
+<p>Sirve para descargar cambios del repositorio remoto <strong>SIN</strong> aplicarlos en nuestro código</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>git<span class="w"> </span>fetch
+</span></code></pre></div>
+<hr />
+<h2 id="git-push-subir-commits">💠 [GIT PUSH] SUBIR commits</h2>
+<p>Sirve para subir commits al respositorio remoto (por ejemplo, GitHub)</p>
+<div class="admonition warning">
+<p class="admonition-title">¡IMPORTANTE!</p>
+<p>Cuando subes por primera vez una rama, debemos hacer este comando:</p>
+</div>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span><span class="o">[</span>rama<span class="w"> </span><span class="o">(</span>ej.main<span class="o">)]</span>
+</span></code></pre></div>
+o 
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span><span class="o">[</span>rama<span class="w"> </span><span class="o">(</span>ej.develop<span class="o">)]</span>
+</span></code></pre></div></p>
+<p>Esto hace:</p>
+<ul>
+<li>sube la rama</li>
+<li>la conecta con el remoto</li>
+</ul>
+<p>Después ya puedes usar solo
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>git<span class="w"> </span>push
+</span></code></pre></div></p>
+<hr />
+<h2 id="git-pull-bajar-commits">💠 [GIT PULL] BAJAR commits</h2>
+<p>Sirve para traer cambios del repositorio remoto a nuestro ordenador y además mezclarlos automáticamente con nuestra rama actual.</p>
+<blockquote>
+<p>💡 <strong>Idea principal:</strong> </p>
+<p>git pull= git fetch + git merge</p>
+</blockquote>
+<p>Hace 2 cosas:
+- Descarga cambios (fetch)
+- Los mezcla con nuestro código (merge)</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>git<span class="w"> </span>pull
+</span></code></pre></div>
+<h4 id="git-pull-rebase">GIT PULL --REBASE</h4>
+<p>Hay otra opción muy buena que es la de <strong>juntar</strong>
+En lugar de mezclar, reordena los commits encima del remoto
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>git<span class="w"> </span>pull<span class="w"> </span>--rebase
+</span></code></pre></div></p>
+<hr />
+<h2 id="git-remote-conexion-con-repos-externos">💠 [GIT REMOTE] Conexión con repos externos</h2>
+<p>Sirve para conectar tu git con repositorios externos como: GitHub, Azure, DevOps, GitLab, etc.</p>
+<div class="language-bash highlight"><span class="filename">Ver remotos</span><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>git<span class="w"> </span>remote<span class="w"> </span>-v
+</span></code></pre></div>
+<p>Para subir un git a remoto haremos el siguiente comando</p>
+<div class="language-bash highlight"><span class="filename">Subir git a remoto</span><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>&lt;URL&gt;
+</span></code></pre></div>
+<p>Cuando es la primera vez que subes código a tu repo en remoto debemos hacer este comando</p>
+<div class="language-bash highlight"><span class="filename">Primera subida de código</span><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</span></code></pre></div>
+<p>También podemos cambiar la URL del remoto</p>
+<div class="language-bash highlight"><span class="filename">Cambiar URL del remoto</span><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>&lt;Nueva_URL&gt;
+</span></code></pre></div>
+<p>Para eliminar el remoto</p>
+<div class="language-bash highlight"><span class="filename">Eliminar el remoto</span><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>git<span class="w"> </span>remote<span class="w"> </span>remove<span class="w"> </span>origin
+</span></code></pre></div>
+<p>Para ver info detallada</p>
+<div class="language-bash highlight"><span class="filename">Ver info detellada</span><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>git<span class="w"> </span>remote<span class="w"> </span>show<span class="w"> </span>origin
+</span></code></pre></div>
+<div class="admonition warining">
+<p class="admonition-title">IMPORTANTE</p>
+<p>Clonar el repositorio externo ya crea el 'remote'</p>
+<p><code>git clone URL</code></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/patricia-algarra/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/PatriciaAlgarra-BASETIS" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.expand", "navigation.instant", "navigation.footer"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
