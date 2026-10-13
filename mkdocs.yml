@@ -1,0 +1,65 @@
+site_name: Documentación de Patricia
+site_url: https://patricia-docs.com
+theme:
+  name: material
+  language: es
+  font:
+    text: Lato
+    code: Ubuntu Mono
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.instant
+    - navigation.footer
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark Mode
+      primary: custom
+      accent: yellow
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light Mode
+      primary: custom
+      accent: deep orange
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg 
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format 
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+
+nav:
+  - Inicio: index.md
+  
+
+extra:
+  social:
+    - icon: material/linkedin
+      link: https://www.linkedin.com/in/patricia-algarra/
+    - icon: simple/github
+      link: https://github.com/PatriciaAlgarra-BASETIS
+
+extra_css:
+  - stylesheets/extra.css

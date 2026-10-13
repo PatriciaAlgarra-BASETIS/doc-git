@@ -1,9 +1,5 @@
 # 🧠 Guía rápida de Git (Completa y Visual)
 
-Holaa, yo soy Patri y esta es mi guía para aprender o tener a mano algunos de los comandos de Git. :shipit:
-
----
-
 ## 📌 ¿Qué es Git?
 
 **Git** es un sistema de control de versiones que te permite: 
@@ -20,11 +16,15 @@ Holaa, yo soy Patri y esta es mi guía para aprender o tener a mano algunos de l
 2. **Staging Area** -> Lo que vas a guardar
 3. **Repository** -> historial de commits
 
-### Fujo básico de Git:
-1. Modificas archivos
-2. Los añades
-3. Guardas cambios
-4. Los subes
+### Flujo básico de Git
+
+1º Modificas archivos
+
+2º Los añades
+
+3º Guardas cambios
+
+4º Los subes
 
 ---
 
@@ -39,20 +39,21 @@ Sirve para evitar subir ficheros y cosas no relevantes o cosas sensibles q no de
 - y sobre todo, secretos (.venv, claves API, tokens)
 
 
-> <u>⚠️ **Cuidado**</u>
-> 
-> Si ya subiste un archivo antes, añadirlo al `.gitignore` NO lo elimina automáticamente del repo.
->
-> Para dejar de trackearlo:
-> ```bash
-> git rm --cached archivo
-> ```
->
-> o para limpiar todo:
-> ```bash
-> git rm -r --cached .
-> git add .
-> ```
+!!! warning "Cuidado"
+    Si ya subiste un archivo antes, añadirlo al `.gitignore` NO lo elimina automáticamente del repo.
+
+    Para dejar de trackearlo:
+    ```bash
+    git rm --cached archivo
+    ```
+
+    o para limpiar todo:
+    ```bash
+    git rm -r --cached .
+    git add .
+    ```
+
+
 
 
 ---
@@ -60,8 +61,8 @@ Sirve para evitar subir ficheros y cosas no relevantes o cosas sensibles q no de
 # COMANDOS ‼️
 ---
 
-## 🌍 Configuración Básica Global 🌍
-Para empezar a utilizar git debemos hacer una configuración global que mínimo tiene que incluir 2 cosas:
+## 🌐 Configuración Básica Global 🌐
+ Para empezar a utilizar git debemos hacer una configuración global que mínimo tiene que incluir 2 cosas:
  
 - Nombre de Usuario
 - Email
@@ -81,7 +82,9 @@ git config --global user.email "tu_email@mail.com"
 ```bash
 git config --global alias.[nombre_alias] "Comando para el álias"
 ```
-> **Ejemplo:** git config --global alias.tree "log --graph --decorate --all --oneline"
+
+!!! example "**Ejemplo**"
+     git config --global alias.tree "log --graph --decorate --all --oneline"
 
 
 
@@ -100,7 +103,8 @@ git init
 
 Con esto te aparecerá en la carpeta del Proyecto una carpeta oculta llamada **".git"**
 
-> **Opcional:** podemos cambiarle el nombre a la rama principal que aparece como "master", esto es algo personal porque luego al implementar con git, por defecto, esta rama se llama "main" además que se está estandarizando que se llame así
+??? abstract "**Opcional**"
+     Podemos cambiarle el nombre a la rama principal que aparece como "master", esto es algo personal porque luego al implementar con git, por defecto, esta rama se llama "main" además que se está estandarizando que se llame así
 
 Podemos ver con el comando **'git status'** el nombre que tiene antes de cambiarlo
 
@@ -108,8 +112,6 @@ Para cambiarlo usaremos este comando:
 ```bash
 git branch -m "main"
 ```
-
-
 
 
 ___
@@ -157,6 +159,7 @@ git commit -m "Texto que identifique por qué se hizo el commit"
 Hay distintos tipos de commits que podemos encontrarlos en esta url [conventionalcommits.org](https://www.conventionalcommits.org/es/v1.0.0/ "Más info sobre Commits")
 
 Principalmente hay 2:
+
 - **fix:** para cambios pequeños
 - **feat:** para cambios más grandes
 
@@ -210,12 +213,12 @@ ___
 Este comando tiene muchas funciones y hay tener varias cosas en cuenta.
 Sirve principalmente para moverte dentro del repositorio.
  
- #### 🔹**1. Uso principal: Cambiar de rama.**
+#### 🔹 **1. Uso principal: Cambiar de rama.**
  
  Aquí hay que tener clara una cosa
  
  |  Comando |   Para qué sirve  |
- |:--------:|:------------------|
+ |:--------|:------------------|
  |**git checkout** | Hace MUCHAS cosas (cambiar rama, restaurar archivos, moverte a commits) |
  |**git switch** | SOLO cambia de rama (más claro y seguro) |
 
@@ -223,15 +226,18 @@ El commando es:
 ```bash
 git checkout [nombre_rama]
 ```
-> 👀 **OJO:** Si tienes cambios sin guardar, git puede: 
->    - bloquear el cambio
->   - o moverlos contigo (dependiendo del caso)
+!!! warning "👀 **¡OJO!**"
+    Si tienes cambios sin guardar, git puede: 
+
+    - bloquear el cambio
+    - o moverlos contigo (dependiendo del caso)
 
 #### 🔹 **2. Crear o cambiar de rama**
 ```bash
 git checkout -b [nombre_nueva_rama]
 ```
 Esto hace 2 cosas:
+
 - Crea la rama (-b)
 - Se mueve a ella
 
@@ -242,9 +248,11 @@ git checkout archivo.txt
 ```
 #### 🔹 **4. Ir a un commit concreto**
 Te mueves a un commit específico
-> 👀 **OJO:** pero debes tener en cuenta que esto crea un estado especial **Detached HEAD** que significa
-> - No estas en ninguna rama
-> - Estás "viendo el pasado"
+!!! warning "👀 **¡OJO!**" 
+    Pero debes tener en cuenta que esto crea un estado especial **Detached HEAD** que significa
+    
+     - No estas en ninguna rama
+     - Estás "viendo el pasado"
 
 ```bash
 git checkout [hash]
@@ -252,6 +260,7 @@ git checkout [hash]
 > 📋 **Nota:** el hash puede ser completo o la versión simplificada, podemos verlo con **'git log'**
 
 Sirve para: 
+
 - Probar versiones antiguas
 - Revisar código viejo
 - Debuggear
@@ -279,6 +288,7 @@ Se encarga de mover el puntero HEAD (donde estás en el historial)
 git reset
 ```
 Qué hace:
+
 - Quita el archivo del 'git add'
 - NO bora cambios
 
@@ -288,6 +298,7 @@ Este es otro tipo que es el más peligroso
 git reset --hard
 ```
  Qué hace:
+
  - Elimina el commit
  - Elimina cambios en archivos
  - Limpia staging
@@ -301,7 +312,7 @@ ___
 ## 💠 [GIT BRANCH] Ver, Crear y Gestionar Ramas
 
 
- #### 🔹 **1. Ver ramas.**
+#### 🔹 **1. Ver ramas.**
 ```bash
 git branch
 ```
@@ -330,7 +341,8 @@ Rebase = "mover el trabajo como si hubiera empezado más tarde"
 ```bash
 git rebase [nombre_rama]
 ```
-> **Nota:** Rebase **NO** mueve commits, los recrea. Por eso:
+> 📋**Nota:** Rebase **NO** mueve commits, los recrea. Por eso:
+>
 > - Cambian los IDs
 > - Se "reescribe" la historia
 
@@ -394,7 +406,7 @@ git diff archivo.txt
 
 
 ___
-## 💠 [GIT FETCH] Descarga cambios del SIN aplicar cambios
+## 💠 [GIT FETCH] Descarga cambios SIN aplicarlos
 
 Sirve para descargar cambios del repositorio remoto **SIN** aplicarlos en nuestro código
  
@@ -411,7 +423,8 @@ ___
 
 Sirve para subir commits al respositorio remoto (por ejemplo, GitHub)
 
-⚠️ ¡IMPORTANTE! Cuando subes por primera vez una rama, debemos hacer este comando:
+!!! warning "¡IMPORTANTE!" 
+    Cuando subes por primera vez una rama, debemos hacer este comando:
 ```bash
 git push -u origin [rama (ej.main)]
 ```
@@ -421,6 +434,7 @@ git push --set-upstream origin [rama (ej.develop)]
 ```
 
 Esto hace:
+
 - sube la rama
 - la conecta con el remoto
 
@@ -456,3 +470,47 @@ En lugar de mezclar, reordena los commits encima del remoto
 ```bash
 git pull --rebase
 ```
+
+---
+
+## 💠 [GIT REMOTE] Conexión con repos externos
+Sirve para conectar tu git con repositorios externos como: GitHub, Azure, DevOps, GitLab, etc.
+
+```bash title="Ver remotos"
+git remote -v
+```
+
+Para subir un git a remoto haremos el siguiente comando
+
+```bash title="Subir git a remoto"
+git remote add origin <URL>
+```
+
+Cuando es la primera vez que subes código a tu repo en remoto debemos hacer este comando
+
+```bash title="Primera subida de código"
+git push -u origin main
+```
+
+También podemos cambiar la URL del remoto
+
+```bash title="Cambiar URL del remoto"
+git remote set-url origin <Nueva_URL>
+```
+
+Para eliminar el remoto
+
+```bash title="Eliminar el remoto"
+git remote remove origin
+```
+
+Para ver info detallada
+
+```bash title="Ver info detellada"
+git remote show origin
+```
+
+!!! warining "IMPORTANTE"
+    Clonar el repositorio externo ya crea el 'remote'
+
+    `git clone URL`

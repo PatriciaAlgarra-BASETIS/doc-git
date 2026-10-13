@@ -1,0 +1,23 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+
+.md-header__title {
+    font-family: "Lobster", sans-serif;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+}
+
+:root{
+    --md-primary-fg-color: #8749e4;
+    --md-primary-fg-color--light: #8749e4;
+    --md-primary-fg-color--dark: #8749e4;
+}
