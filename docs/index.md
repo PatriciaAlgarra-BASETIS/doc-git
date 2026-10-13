@@ -3,6 +3,7 @@
 ## 📌 ¿Qué es Git?
 
 **Git** es un sistema de control de versiones que te permite: 
+
 - Guardar cambios en tu código 📁
 - Volver atrás si algo falla ⏪
 - Trabajar en equipo 👥
@@ -18,13 +19,15 @@
 
 ### Flujo básico de Git
 
+```
 1º Modificas archivos
-
+    |
 2º Los añades
-
+    |
 3º Guardas cambios
-
+    |
 4º Los subes
+```
 
 ---
 
@@ -66,6 +69,7 @@ Sirve para evitar subir ficheros y cosas no relevantes o cosas sensibles q no de
  
 - Nombre de Usuario
 - Email
+- 
 
 ### 🔹 1. Configurar Nombre que salen en los commits
 ```bash
@@ -74,10 +78,15 @@ git config --global user.name "[Nombre]"
 
 > 📋 **Nota:** el archivo que modificamos con este comando se encuentra en /home/[usuario]/.gitconfig
 
+---
+
 ### 🔹 2. Configurar el Email
 ```bash
 git config --global user.email "tu_email@mail.com"
 ```
+
+---
+
 ### 🔹 3. Configurar Alias (Opcional)
 ```bash
 git config --global alias.[nombre_alias] "Comando para el álias"
@@ -187,6 +196,7 @@ Hay ciertos atributos que se pueden utilizar junto al log para que nos sea más 
  git log --graph
  ```
 
+
 🔹 2. Para verlo **en una línea sin autor y ni fecha**.
 ```bash
 git log --pretty=oneline
@@ -232,6 +242,8 @@ git checkout [nombre_rama]
     - bloquear el cambio
     - o moverlos contigo (dependiendo del caso)
 
+---
+
 #### 🔹 **2. Crear o cambiar de rama**
 ```bash
 git checkout -b [nombre_nueva_rama]
@@ -241,11 +253,16 @@ Esto hace 2 cosas:
 - Crea la rama (-b)
 - Se mueve a ella
 
+---
+
 #### 🔹 **3. Recuperar archivos**
 Restaura el archivo a su último commit.
 ```bash
 git checkout archivo.txt
 ```
+
+---
+
 #### 🔹 **4. Ir a un commit concreto**
 Te mueves a un commit específico
 !!! warning "👀 **¡OJO!**" 
@@ -291,6 +308,8 @@ Qué hace:
 
 - Quita el archivo del 'git add'
 - NO bora cambios
+
+---
 
 #### GIT RESET --HARD
 Este es otro tipo que es el más peligroso
